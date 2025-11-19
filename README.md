@@ -46,7 +46,7 @@ The system consists of three main components:
 - **Role**: Task execution
 - **Input**: Single task description + context from completed tasks
 - **Output**: Task result, status (completed/failed), and reflection
-- **Model**: GPT-4o-mini
+- **Model**: GPT-4o
 - **Tools**: 
   - Tavily Search (web search)
   - Tavily Extract (web scraping)
@@ -106,7 +106,7 @@ The system consists of three main components:
 │    FOR EACH task in pending_tasks:                          │
 │      ├─ Mark task as "in_progress"                          │
 │      ├─ Gather context from completed tasks                 │
-│      ├─ Execute with Executor Agent (GPT-4o-mini + tools)   │
+│      ├─ Execute with Executor Agent (GPT-4o + tools)   │
 │      │   ↓                                                   │
 │      │   Agent may call tools:                              │
 │      │   - TavilySearch (web search)                        │
@@ -192,7 +192,7 @@ For **each task**, the Executor Agent:
    ```
 
 2. **Agent processes** using:
-   - Internal reasoning (GPT-4o-mini)
+   - Internal reasoning (GPT-4o)
    - Tool calls when needed (searches web, scrapes URLs)
 
 3. **Returns structured result**:
@@ -316,7 +316,7 @@ Todo-Agent/
 │   ├── agents/
 │   │   ├── __init__.py
 │   │   ├── planner.py       # Planner Agent (GPT-4o)
-│   │   └── executor.py      # Executor Agent (GPT-4o-mini)
+│   │   └── executor.py      # Executor Agent (GPT-4o)
 │   │
 │   └── tools/
 │       ├── search.py        # Tavily Search tool

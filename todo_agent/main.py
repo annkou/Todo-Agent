@@ -13,9 +13,7 @@ def main():
     # db_manager = DatabaseManager("agent_state.db")
     Base.metadata.create_all(engine)
     planner = Planner(model="gpt-4o")
-    executor = Executor(
-        model="gpt-4o-mini", tools=[create_search_tool(), web_scraper()]
-    )
+    executor = Executor(model="gpt-4o", tools=[create_search_tool(), web_scraper()])
     objective = input("\n🎯 Enter your objective: ").strip()
 
     # Encode the string to bytes and create SHA-256 hash
