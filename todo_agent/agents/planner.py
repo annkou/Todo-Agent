@@ -31,6 +31,8 @@ class Planner:
 Each step should be actionable and specific. Do not add any superfluous steps. The result of the final step should be the final answer.
 Before finalizing your plan, reflect on whether the steps are necessary, logical, and sufficient to achieve the objective.
 
+CRITICAL: The FINAL task must directly produce the complete deliverable requested by the user.
+
 Your task:
 1. Convert it into a structured TODO list (JSON).
 2. Use fields: id, title, content, status.
